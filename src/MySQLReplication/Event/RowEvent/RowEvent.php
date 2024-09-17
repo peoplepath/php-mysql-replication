@@ -715,7 +715,7 @@ class RowEvent extends EventCommon
         } catch (Exception $exception) {
             return null;
         }
-        if (array_sum(DateTime::getLastErrors()) > 0) {
+        if (array_sum(DateTime::getLastErrors() ?: []) > 0) {
             return null;
         }
 
